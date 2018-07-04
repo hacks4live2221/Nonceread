@@ -1,0 +1,14 @@
+
+
+@echo off
+title NONCEREADER BY HACKS4live
+echo Creating a folder in TEMP
+if exist %TMP%\nonceinfo\ (echo folder already is in TEMP, You can delete this folder upon exiting.) else ( mkdir %TMP%\nonceinfo)
+echo Backing up blob....
+If exist %TMP%\nonceinfo\blob.shsh2 (echo There is already a blob in this folder, did you run this program before?) else (copy %userprofile%\desktop\blob.shsh2 %TMP%\nonceinfo\blob.shsh2 )
+FIND  /i "0x" %TMP%\nonceinfo\blob.shsh2										
+echo Press any key to open Your BACKUP folder. 
+pause	
+%SystemRoot%\explorer.exe "%TMP%\nonceinfo\"
+echo Press again any key to exit.
+pause
